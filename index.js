@@ -63,7 +63,8 @@ function removeFromCart(item) {
         return viewCart();
       }
     }
-    return 'That item is not in your cart.' + viewCart();
+    console.log('That item is not in your cart.');
+    return viewCart();
   }
 
 
