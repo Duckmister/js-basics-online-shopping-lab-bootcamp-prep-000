@@ -51,22 +51,18 @@ function total() {
     var object = cart[a];
     var itemName = Object.keys(object);
     var itemPrice = object[itemName];
-    total = total + itemPrice
+    total = total + itemPrice;
   }
   return total;
 }
 
 function removeFromCart(item) {
-  for (var b = 0; b<cart.length; b++){
-    var object = cart[b];
-    var itemName = Object.keys(object);
-    var itemPrice = object[itemName];
-    if (itemName === item){
-      cart.splice(b, 1);
-      console.log(cart);
+  for (var name in cart){
+    if (cart.hasOwnProperty(item)=== true){
+      console.log('I found it')
     }
-    else{
-      console.log('That item is not in your cart.' + viewCart());
+    else {
+      console.log("nope")
     }
   }
 }
